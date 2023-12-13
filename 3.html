@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>PHASE SHIFT</title>
+    <link rel="stylesheet" href="style1.css">
+</head>
+<body class="three">
+    <img class="six" src="BMSCE-Logo.webp" width="70" height="70">
+    <img class="seven" src="white ps logo.jpg" width="80" height="80">
+    <img class="eight1" src="level2.png" width="220" height="50">
+    <img class="nine1" src="maze.png" width="450" height="80">
+    <p>Use arrow keys to move around!</p>
+    <button onclick="maze.reset();">Reset</button>
+    <div style="align-items: center;" id="grid"></div>
+    <script style="align-items: center;" src="script1.js"></script>
+    <script style="align-items: ;">
+        window.maze = new Maze({
+            gridElement: document.getElementById('grid'),
+            gridSize: new Point(35, 20),
+            blockSize: 25,
+            onSolved: function() {
+                setTimeout(function() {
+                    alert('A-maze-ing!');
+
+                    // Redirect to another web page when the maze is solved
+                    window.location.href = '4.html';
+                }, 200);
+            }
+        });
+        maze.reset();
+    </script>
+</body>
+</html>

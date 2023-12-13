@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>MazeGen JS</title>
+    <link rel="stylesheet" type="text/css" href="style1.css">
+  </head>
+  <body>
+    <h1>MazeGen JS</h1>
+    <p>Use arrow keys to move around</p>
+    <button onclick="maze.reset();">Reset</button>
+    <div id="grid"></div>
+    <script src="maze.js"></script>
+    <script>
+      window.maze = new Maze({
+        gridElement: document.getElementById('grid'),
+        gridSize: new Point(35, 20),
+        blockSize: 25,
+        onSolved: function() {
+          setTimeout(function() { alert('A maze ing!'); }, 200);
+        }
+      });
+      maze.reset();
+    </script>
+  </body>
+</html>

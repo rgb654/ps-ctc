@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        
+        <title>PHASE SHIFT</title>
+        <link href="https://fonts.googleapis.com/css2?family=Black+Ops+One&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body class="two">
+
+        <img class="six" src="BMSCE-Logo.webp" width="70" height="70">
+        <img class="seven" src="white ps logo.jpg" width="80" height="80">
+       <img class="eight" src="level1.png" width="220" height="50">
+       <img class="nine" src="pictionary1.png" width="450" height="80">
+       <div class="row">
+        <div class="emoji-container one"> 💨 &#127968;</div>
+        <div class="emoji-container two">📞 ⚖ </div>
+        <div class="emoji-container three">🥫 &#129420;</div>
+    </div>
+    <div class="row">
+        <form class="password-form one" id="passwordForm1" method="post">
+            Password:<br>
+            <textarea cols="34" rows="3" name="pass" id="password1" placeholder="Hint: find unique places to stay and experiences around the world, all in the palm of your hand."></textarea>
+            <button type="submit">Submit</button>
+        </form>
+        <form class="password-form two" id="passwordForm2" method="post">
+            Password:<br>
+            <textarea cols="34" rows="3" name="pass" id="password2" placeholder="Hint: fast, secure chats with disappearing act - who am I!?"></textarea>
+            <button type="submit">Submit</button>
+        </form>
+        <form class="password-form three" id="passwordForm3" method="post">
+            Password:<br>
+            <textarea cols="34" rows="3" name="pass" id="password3" placeholder="Hint: Connections spark with a swipe."></textarea>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+    <div class="row">
+        <div class="emoji-container four">⛅ ⇨ 🫙 </div>
+        <div class="emoji-container five">🔴🤖🎯 </div>
+        <div class="emoji-container six">💎🤏 </div>
+    </div>
+    <div class="row">
+        <form class="password-form four" id="passwordForm4" method="post">
+            Password:<br>
+            <textarea cols="34" rows="3" name="pass" id="password4" placeholder="Hint: Hint: Your virtual locker in the sky, where files spread their wings!"></textarea>
+            <button type="submit">Submit</button>
+        </form>
+        <form class="password-form five" id="passwordForm5" method="post">
+            Password:<br>
+            <textarea cols="34" rows="3" name="pass" id="password5" placeholder="Hint: I speak in many voices, upvoted or downvoted, on topics from the strange to the ordinary. What am I?."></textarea>
+            <button type="submit">Submit</button>
+        </form>
+        <form class="password-form six" id="passwordForm6" method="post">
+            Password:<br>
+            <textarea cols="34" rows="3" name="pass" id="password6" placeholder="Hint:Think about a smart duo in the sky, linked to the zodiac sign of twins,which is capable of answering all your queries!"></textarea>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+    
+    <script>
+        // Add event listeners for the new forms
+        document.getElementById("passwordForm1").addEventListener("submit", function (event) {
+            event.preventDefault();
+            var userPassword = document.getElementById("password1").value;
+            var correctPassword = "airbnb";
+            if (userPassword === correctPassword) {
+                alert("Success! You entered the correct answer.");
+            } else {
+                alert("Wrong answer. Try again.");
+            }
+        });
+        
+        document.getElementById("passwordForm2").addEventListener("submit", function (event) {
+            event.preventDefault();
+            var userPassword = document.getElementById("password2").value;
+            var correctPassword = "telegram";
+            if (userPassword === correctPassword) {
+                alert("Success! You entered the correct answer.");
+            } else {
+                alert("Wrong answer. Try again.");
+            }
+        });
+
+        document.getElementById("passwordForm3").addEventListener("submit", function (event) {
+            event.preventDefault();
+            var userPassword = document.getElementById("password3").value;
+            var correctPassword = "tinder";
+            if (userPassword === correctPassword) {
+                alert("Success! You entered the correct answer.");
+            } else {
+                alert("Wrong answer. Try again.");
+            }
+        });
+
+        document.getElementById("passwordForm4").addEventListener("submit", function (event) {
+            event.preventDefault();
+            var userPassword = document.getElementById("password4").value;
+            var correctPassword = "cloudstorage";
+            if (userPassword === correctPassword) {
+                alert("Success! You entered the correct answer.");
+            } else {
+                alert("Wrong answer. Try again.");
+            }
+        });
+
+        document.getElementById("passwordForm5").addEventListener("submit", function (event) {
+            event.preventDefault();
+            var userPassword = document.getElementById("password5").value;
+            var correctPassword = "reddit";
+            if (userPassword === correctPassword) {
+                alert("Success! You entered the correct answer.");
+            } else {
+                alert("Wrong answer. Try again.");
+            }
+        });
+    
+        document.getElementById("passwordForm6").addEventListener("submit", function (event) {
+            event.preventDefault();
+            var userPassword = document.getElementById("password6").value;
+            var correctPassword = "gemini";
+            if (userPassword === correctPassword) {
+                alert("Success! You entered the correct answer.");
+                if (allPasswordsCorrect()) {
+                    window.location.href = "3.html";
+                }
+            } else {
+                alert("Wrong answer. Try again.");
+            }
+        });
+    
+        // Modify the allPasswordsCorrect function to include the new passwords
+        function allPasswordsCorrect() {
+            var password1 = document.getElementById("password1").value;
+            var password2 = document.getElementById("password2").value;
+            var password3 = document.getElementById("password3").value;
+            var password4 = document.getElementById("password4").value;
+            var password5 = document.getElementById("password5").value;
+            var password6 = document.getElementById("password6").value;
+    
+            return (
+                password1 === "airbnb" &&
+                password2 === "telegram" &&
+                password3 === "tinder" &&
+                password4 === "cloudstorage" &&
+                password5 === "reddit" &&
+                password6 === "gemini"
+            );
+        }
+    </script>
+        
+      
+</body>
+</html>      
+
+
